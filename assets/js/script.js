@@ -19,7 +19,7 @@ document.getElementById('3d-view').appendChild(renderer.domElement);
 
 // Add lights to the scene
 function addLights() {
-    const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
+    const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light (light color)
     scene.add(ambientLight);
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -42,7 +42,7 @@ function addLights() {
 addLights();
 
 // Create mirror object
-const mirrorDimensions = { width: 1.5, height: 0.8 }; // 1500 mm x 800 mm
+const mirrorDimensions = { width: 1.5, height: 0.8 }; // 1500 mm x 800 mm defualt 
 const mirrorGeometry = new THREE.PlaneGeometry(mirrorDimensions.width, mirrorDimensions.height);
 const mirrorMaterial = new THREE.MeshStandardMaterial({ color: 0x888888, side: THREE.DoubleSide });
 const mirror = new THREE.Mesh(mirrorGeometry, mirrorMaterial);
