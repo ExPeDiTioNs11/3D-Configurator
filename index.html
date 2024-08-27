@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Mirror Configurator - Ali Mert Başak Task Mission</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div class="configurator">
+        <h1>3D Mirror Configurator</h1>
+        <div class="controls">
+            <label for="width">Width (mm):</label>
+            <input type="number" id="width" min="400" max="2500" placeholder="Enter width" value="1500">
+
+            <label for="height">Height (mm):</label>
+            <input type="number" id="height" min="400" max="2500" placeholder="Enter height" value="800">
+
+            <div id="tiltSelectorArea">
+                <label for="tilt">Tilt (degrees):</label>
+                <input type="range" id="tilt" min="-30" max="30" value="0">
+            </div>
+
+            <div id="add-sensor">
+                <label for="sensorSelect">Add Sensor</label>
+                <select id="sensorSelect">
+                    <option value="0">-- Select Sensor --</option>
+                    <option value="1">Touch-Sensor + 49.99 €</option>
+                </select>
+            </div>
+
+
+            <div id="switch-position" style="display:none;">
+                <label for="switchPosition">Switch Position:</label>
+                <select id="switchPosition">
+                    <option value="">-- Select Position --</option>
+                    <option value="1:30">1:30 Uhr (rechts oben)</option>
+                    <option value="3:00">3:00 Uhr (rechts)</option>
+                    <option value="4:30">4:30 Uhr (rechts unten)</option>
+                    <option value="6:00">6:00 Uhr (unten mittig)</option>
+                    <option value="7:30">7:30 Uhr (links unten)</option>
+                    <option value="9:00">9:00 Uhr (links)</option>
+                    <option value="10:30">10:30 Uhr (links oben)</option>
+                    <option value="12:00">12:00 Uhr (oben)</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="error-message" style="color:red;"></div>
+
+        <div id="3d-view"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
